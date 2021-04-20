@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -118,10 +118,12 @@
 		11722482262F298F00510CA9 /* SportsApp */ = {
 			isa = PBXGroup;
 			children = (
+				117224B8262F893D00510CA9 /* Data */,
+				117224B9262F897D00510CA9 /* Views */,
+				117224BA262F899A00510CA9 /* Controllers */,
+				117224BC262F89E100510CA9 /* Models */,
 				11722483262F298F00510CA9 /* AppDelegate.swift */,
 				11722485262F298F00510CA9 /* SceneDelegate.swift */,
-				11722487262F298F00510CA9 /* ViewController.swift */,
-				11722489262F298F00510CA9 /* Main.storyboard */,
 				1172248F262F299600510CA9 /* Assets.xcassets */,
 				11722491262F299600510CA9 /* LaunchScreen.storyboard */,
 				11722494262F299600510CA9 /* Info.plist */,
@@ -148,6 +150,36 @@
 			path = SportsAppUITests;
 			sourceTree = "<group>";
 		};
+		117224B8262F893D00510CA9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		117224B9262F897D00510CA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11722489262F298F00510CA9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		117224BA262F899A00510CA9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11722487262F298F00510CA9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		117224BC262F89E100510CA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4331775667533A1EC832BF5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +190,6 @@
 				B2BFEA59BC2FB3E7992669AB /* Pods-SportsAppTests.debug.xcconfig */,
 				7D5D92B8EA10084EA71BD26A /* Pods-SportsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
