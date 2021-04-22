@@ -9,8 +9,14 @@
 import Foundation
 import Alamofire
 
+
 class NetworkServiceModal {
     static let instance = NetworkServiceModal()
+    
+    func checkInternet() -> Bool{
+        return NetworkReachabilityManager()?.isReachable ?? false
+    }
+    
     func getData<T :Decodable>(url: String, completion: @escaping (T?,Error?)->Void) {
         AF.request(url).responseJSON { (response) in
             guard let data = response.data else{ return }

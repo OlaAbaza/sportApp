@@ -8,13 +8,13 @@
 
 import Foundation
 struct SportsList: Codable {
-    let sports: [Sport]?
+    var sports: [Sport]?
 
 }
 
 struct Sport: Codable {
-    let sportName: String?
-    let sportImg: String?
+    var sportName: String?
+    var sportImg: String?
     
     enum CodingKeys: String, CodingKey {
         case sportName = "strSport"
