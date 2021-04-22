@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class NetworkServiceModal {
-    static let instance = ApiModal()
+    static let instance = NetworkServiceModal()
     func getData<T :Decodable>(url: String, completion: @escaping (T?,Error?)->Void) {
         AF.request(url).responseJSON { (response) in
             guard let data = response.data else{ return }

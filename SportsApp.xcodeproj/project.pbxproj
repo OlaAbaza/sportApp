@@ -16,6 +16,12 @@
 		11722493262F299600510CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11722491262F299600510CA9 /* LaunchScreen.storyboard */; };
 		1172249E262F299600510CA9 /* SportsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172249D262F299600510CA9 /* SportsAppTests.swift */; };
 		117224A9262F299600510CA9 /* SportsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117224A8262F299600510CA9 /* SportsAppUITests.swift */; };
+		11785C692630FC4300DE3B03 /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11785C682630FC4300DE3B03 /* Leagues.swift */; };
+		11785C6C26310DB500DE3B03 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11785C6B26310DB500DE3B03 /* LeaguesViewController.swift */; };
+		11785C6E26310E6100DE3B03 /* LeaguesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11785C6D26310E6100DE3B03 /* LeaguesTableCell.swift */; };
+		11785C7026311A9C00DE3B03 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11785C6F26311A9C00DE3B03 /* Indicator.swift */; };
+		11785C72263120D700DE3B03 /* LeaguesDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11785C71263120D700DE3B03 /* LeaguesDetailes.swift */; };
+		11F457602632358100694427 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4575F2632358100694427 /* YoutubeViewController.swift */; };
 		39517665263094950057A16D /* NetworkServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39517664263094950057A16D /* NetworkServiceModel.swift */; };
 		3951766A263098C90057A16D /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39517669263098C90057A16D /* Sports.swift */; };
 		3951767126309F0C0057A16D /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3951767026309F0C0057A16D /* URLs.swift */; };
@@ -57,6 +63,12 @@
 		117224A4262F299600510CA9 /* SportsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		117224A8262F299600510CA9 /* SportsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsAppUITests.swift; sourceTree = "<group>"; };
 		117224AA262F299600510CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11785C682630FC4300DE3B03 /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
+		11785C6B26310DB500DE3B03 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
+		11785C6D26310E6100DE3B03 /* LeaguesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableCell.swift; sourceTree = "<group>"; };
+		11785C6F26311A9C00DE3B03 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		11785C71263120D700DE3B03 /* LeaguesDetailes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesDetailes.swift; sourceTree = "<group>"; };
+		11F4575F2632358100694427 /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		225BC45C4DF01FBA8F60AEE6 /* Pods_SportsApp_SportsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportsApp_SportsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3025E63DC46614622E3AE8D7 /* Pods_SportsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39517664263094950057A16D /* NetworkServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceModel.swift; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 				11722491262F299600510CA9 /* LaunchScreen.storyboard */,
 				11722494262F299600510CA9 /* Info.plist */,
 				1172248C262F298F00510CA9 /* SportsApp.xcdatamodeld */,
+				11785C6F26311A9C00DE3B03 /* Indicator.swift */,
 			);
 			path = SportsApp;
 			sourceTree = "<group>";
@@ -161,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				39517669263098C90057A16D /* Sports.swift */,
+				11785C682630FC4300DE3B03 /* Leagues.swift */,
+				11785C71263120D700DE3B03 /* LeaguesDetailes.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -176,7 +191,9 @@
 		117224BA262F899A00510CA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11785C6A2631005900DE3B03 /* LeaguesController */,
 				11722487262F298F00510CA9 /* ViewController.swift */,
+				11F4575F2632358100694427 /* YoutubeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +204,15 @@
 				395176632630945D0057A16D /* NetworkServiceModel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		11785C6A2631005900DE3B03 /* LeaguesController */ = {
+			isa = PBXGroup;
+			children = (
+				11785C6B26310DB500DE3B03 /* LeaguesViewController.swift */,
+				11785C6D26310E6100DE3B03 /* LeaguesTableCell.swift */,
+			);
+			path = LeaguesController;
 			sourceTree = "<group>";
 		};
 		395176632630945D0057A16D /* NetworkServiceModel */ = {
@@ -469,11 +495,17 @@
 			files = (
 				11722488262F298F00510CA9 /* ViewController.swift in Sources */,
 				11722484262F298F00510CA9 /* AppDelegate.swift in Sources */,
+				11785C7026311A9C00DE3B03 /* Indicator.swift in Sources */,
+				11785C6E26310E6100DE3B03 /* LeaguesTableCell.swift in Sources */,
 				1172248E262F298F00510CA9 /* SportsApp.xcdatamodeld in Sources */,
+				11F457602632358100694427 /* YoutubeViewController.swift in Sources */,
 				3951767126309F0C0057A16D /* URLs.swift in Sources */,
 				39517665263094950057A16D /* NetworkServiceModel.swift in Sources */,
 				3951766A263098C90057A16D /* Sports.swift in Sources */,
+				11785C692630FC4300DE3B03 /* Leagues.swift in Sources */,
 				11722486262F298F00510CA9 /* SceneDelegate.swift in Sources */,
+				11785C6C26310DB500DE3B03 /* LeaguesViewController.swift in Sources */,
+				11785C72263120D700DE3B03 /* LeaguesDetailes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
