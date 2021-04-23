@@ -21,44 +21,42 @@ class LeaguesDetialesViewController: UIViewController {
     var events = [Events]()
     var upCommingEvents = [Events]()
     
-    //let coreData = CoreDataModel()
+    let coreData = CoreDataModel()
     let indicator = Indicator()
+    var legueId : String = "4328"
+    var leagueImage : String = ""
+    var leagueName : String = ""
+    var youtubeLink : String = ""
     
    override func viewDidLoad() {
         super.viewDidLoad()
         myLeague = "4328"
         myTeam = "English%20Premier%20League"
+        self.title = "English Premier"
         self.view.backgroundColor = UIColor(named: "background")
-//        if coreData.isLeagueInFavorate(ID: (myLeague?.id)!) {
-//            favoriteButton.image = UIImage(systemName: "heart.fill")
-//        }else{
-//            favoriteButton.image = UIImage(systemName: "heart")
-//        }
+        if coreData.isLeagueInFavorate(ID: (legueId)) {
+            favoriteButton.image = UIImage(systemName: "heart.fill")
+        }else{
+            favoriteButton.image = UIImage(systemName: "heart")
+        }
         favoriteButton!.tintColor = .red
         self.navigationItem.rightBarButtonItem = favoriteButton
         self.indicator.startAnimating(view: view)
         setupCollectionView()
-        requestUpcomingEvents()
-        requestEvents()
+        //requestUpcomingEvents()
+    requestEvents(url: URLs.getUpcommingEventUrl.rawValue,isUpcommingEvent: true)
+    requestEvents(url: URLs.getEventDetailsUrl.rawValue,isUpcommingEvent: false)
         requestTeams()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        /*
-         self.indicator.startAnimating(view: view)
-         setupCollectionView()
-         requestEvents()
-         requestTeams()
- */
     }
     
     @IBAction func favoriteAction(_ sender: UIBarButtonItem) {
-//        if coreData.isLeagueInFavorate(ID: (myLeague?.id)!) {
-//            favoriteButton.image = UIImage(systemName: "heart")
-//            coreData.deleteLeague(leagueID: (myLeague?.id)!)
-//        }else{
-//            favoriteButton.image = UIImage(systemName: "heart.fill")
-//            coreData.addLeague(league: myLeague!)
-//        }
+        if coreData.isLeagueInFavorate(ID: (legueId)) {
+            favoriteButton.image = UIImage(systemName: "heart")
+            coreData.deleteLeague(leagueID: (legueId))
+        }else{
+            favoriteButton.image = UIImage(systemName: "heart.fill")
+           // coreData.addLeague(league: myLeague!)
+        }
     }
     
     func requestTeams(){
@@ -83,55 +81,28 @@ class LeaguesDetialesViewController: UIViewController {
                 }
             }
     }
-    func requestUpcomingEvents(){
+  func requestEvents(url:String,isUpcommingEvent:Bool){
         DispatchQueue.global(qos: .background).async {
             if let leagueId = self.myLeague{
-                let url = URLs.getUpcommingEventUrl.rawValue + leagueId
-                print(url)
+                let url = url + leagueId
                 NetworkServiceModal.instance.getData(url: url, completion:{(myEvents: EventsModel?,error) in
                     if let myError = error{
                         print(myError)
                     }else{
                         guard let events = myEvents else {return}
                         guard let myEvent = events.events  else { return }
-                        self.upCommingEvents = myEvent
-                        
-                    }
-                    DispatchQueue.main.async {
-                        self.resultsCollection.reloadData()
-                        self.upCommingCollection.reloadData()
-                        self.indicator.stopAnimating()
-                        if (self.upCommingEvents.count == 0) {
-                            let image = UIImage(named: "no")
-                            let imageView = UIImageView(image: image!)
-                            imageView.frame = self.view.frame
-                            self.view.addSubview(imageView)
+                        if isUpcommingEvent {
+                            self.upCommingEvents = myEvent
                         }
-                    }
-                })
-            }
-            
-        }
-        
-    }
-    func requestEvents(){
-        DispatchQueue.global(qos: .background).async {
-            if let leagueId = self.myLeague{
-                let url = URLs.getEventDetailsUrl.rawValue + leagueId
-                NetworkServiceModal.instance.getData(url: url, completion:{(myEvents: EventsModel?,error) in
-                    if let myError = error{
-                        print(myError)
-                    }else{
-                        guard let events = myEvents else {return}
-                        guard let myEvent = events.events  else { return }
-                        self.events = myEvent
+                        else{
+                            self.events = myEvent }
                         
                     }
                     DispatchQueue.main.async {
                         self.resultsCollection.reloadData()
                         self.upCommingCollection.reloadData()
                         self.indicator.stopAnimating()
-                        if (self.events.count == 0) {
+                        if (self.events.count == 0 && !isUpcommingEvent || self.upCommingEvents.count == 0 && isUpcommingEvent ) {
                             let image = UIImage(named: "no")
                             let imageView = UIImageView(image: image!)
                             imageView.frame = self.view.frame
@@ -205,6 +176,9 @@ extension LeaguesDetialesViewController: UICollectionViewDelegate, UICollectionV
             eventCell.displayNames(teamA: event.strHomeTeam ?? "", teamB: event.strAwayTeam ?? "")
             eventCell.displayResults(teamARes: event.intHomeScore, teamBRes: event.intAwayScore)
             eventCell.displayDateTime(date: event.dateEvent, time: event.strTime)
+            eventCell.layer.borderWidth = 2
+            eventCell.layer.borderColor = UIColor(named: "light")?.cgColor
+            eventCell.layer.cornerRadius = 12
             
             return eventCell
         default:
@@ -244,11 +218,13 @@ extension LeaguesDetialesViewController: UICollectionViewDelegateFlowLayout{
         switch collectionView.tag {
         case 0:
             return CGSize(width: collectionView.frame.size.height * 1.2, height: collectionView.frame.size.height - 24)
+        
         case 1:
-            return CGSize(width: ((self.view.frame.size.width/2) - 16), height: (self.view.frame.size.width/3))
+//            return CGSize(width: ((self.view.frame.size.width/2) - 16), height: (self.view.frame.size.width/3))
+            return CGSize(width: (collectionView.frame.width) - 26.5 , height: 200)
             
         default:
-            return CGSize(width: collectionView.frame.size.width * 0.3, height: collectionView.frame.size.height - 24)
+            return CGSize(width: collectionView.frame.size.width * 0.3, height: collectionView.frame.size.height - 35)
         }
         
     }

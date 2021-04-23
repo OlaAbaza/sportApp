@@ -30,6 +30,7 @@
 		395DD41D26320CD300044CBA /* teamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395DD41C26320CD300044CBA /* teamCell.swift */; };
 		395DD42326320D0A00044CBA /* upcommingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395DD42126320D0A00044CBA /* upcommingCollectionCell.swift */; };
 		395DD42426320D0A00044CBA /* EventCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395DD42226320D0A00044CBA /* EventCollectionCell.swift */; };
+		395DD4B22632B14400044CBA /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395DD4B12632B14400044CBA /* CoreDataModel.swift */; };
 		50E78814AF15FD17C46776C7 /* Pods_SportsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3025E63DC46614622E3AE8D7 /* Pods_SportsApp.framework */; };
 		C5F7ABAE679D55A480048A35 /* Pods_SportsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF20B150B0434A2FFF04E9B /* Pods_SportsAppTests.framework */; };
 		E3E83E5895C049CEF3F6AA27 /* Pods_SportsApp_SportsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225BC45C4DF01FBA8F60AEE6 /* Pods_SportsApp_SportsAppUITests.framework */; };
@@ -84,6 +85,7 @@
 		395DD41C26320CD300044CBA /* teamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = teamCell.swift; path = ../../../../../Documents/Sports/SportsApp/Views/teamCell.swift; sourceTree = "<group>"; };
 		395DD42126320D0A00044CBA /* upcommingCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = upcommingCollectionCell.swift; path = ../../../../../Documents/Sports/SportsApp/Views/upcommingCollectionCell.swift; sourceTree = "<group>"; };
 		395DD42226320D0A00044CBA /* EventCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCollectionCell.swift; path = ../../../../../Documents/Sports/SportsApp/Views/EventCollectionCell.swift; sourceTree = "<group>"; };
+		395DD4B12632B14400044CBA /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		60E50CD9E0F77730DEE192CD /* Pods-SportsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsApp.release.xcconfig"; path = "Target Support Files/Pods-SportsApp/Pods-SportsApp.release.xcconfig"; sourceTree = "<group>"; };
 		6DF14DE006A0DA86E35260AC /* Pods-SportsApp-SportsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsApp-SportsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SportsApp-SportsAppUITests/Pods-SportsApp-SportsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D5D92B8EA10084EA71BD26A /* Pods-SportsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsAppTests.release.xcconfig"; path = "Target Support Files/Pods-SportsAppTests/Pods-SportsAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		117224BC262F89E100510CA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				395DD4B62632B14900044CBA /* CoreDataModel */,
 				395176632630945D0057A16D /* NetworkServiceModel */,
 				3951768E2630BD560057A16D /* Indicator.swift */,
 			);
@@ -252,6 +255,14 @@
 				395DD4002631FEAF00044CBA /* LeaguesDetialesViewController.swift */,
 			);
 			path = LeaguesControllers;
+			sourceTree = "<group>";
+		};
+		395DD4B62632B14900044CBA /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				395DD4B12632B14400044CBA /* CoreDataModel.swift */,
+			);
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 		4331775667533A1EC832BF5C /* Pods */ = {
@@ -524,6 +535,7 @@
 				11722484262F298F00510CA9 /* AppDelegate.swift in Sources */,
 				1172248E262F298F00510CA9 /* SportsApp.xcdatamodeld in Sources */,
 				395DD41D26320CD300044CBA /* teamCell.swift in Sources */,
+				395DD4B22632B14400044CBA /* CoreDataModel.swift in Sources */,
 				3951768F2630BD560057A16D /* Indicator.swift in Sources */,
 				395DD4012631FEAF00044CBA /* LeaguesDetialesViewController.swift in Sources */,
 				3951767126309F0C0057A16D /* URLs.swift in Sources */,
