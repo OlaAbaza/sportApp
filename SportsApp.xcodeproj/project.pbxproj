@@ -153,9 +153,9 @@
 		11722482262F298F00510CA9 /* SportsApp */ = {
 			isa = PBXGroup;
 			children = (
+				117224B9262F897D00510CA9 /* Views */,
 				3951766F26309EF70057A16D /* Constants */,
 				117224B8262F893D00510CA9 /* Data */,
-				117224B9262F897D00510CA9 /* Views */,
 				117224BA262F899A00510CA9 /* Controllers */,
 				117224BC262F89E100510CA9 /* Models */,
 				11722483262F298F00510CA9 /* AppDelegate.swift */,
