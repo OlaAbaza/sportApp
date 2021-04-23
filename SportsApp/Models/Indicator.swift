@@ -14,7 +14,8 @@ class Indicator{
     func startAnimating(view: UIView){
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.hidesWhenStopped = true
-       view.addSubview(activityIndicator)
+        view.addSubview(activityIndicator)
+        activityIndicator.center = view.center
         activityIndicator.startAnimating()
     }
     func stopAnimating(){

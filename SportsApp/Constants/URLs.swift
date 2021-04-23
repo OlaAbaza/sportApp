@@ -18,8 +18,3 @@ enum URLs : String {
     case getTeamUrl = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l="
     case TeamDetailsIDUrl = "https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id="
 }
-
-//https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=4328
-//https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League
-
-//"https://www.thesportsdb.com/api/v1/json/1/eventsround.php?r=38&s=2020-2021&id=4328"
