@@ -97,10 +97,10 @@ class SportsCollectionViewController: UICollectionViewController,UICollectionVie
     }
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let leaguesView = storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! ViewController
+//        let leaguesView = storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! ViewController
         //leaguesView.sportName = sports[indexPath.row].strSport!
         
-        self.navigationController?.pushViewController(leaguesView, animated: true)
+//        self.navigationController?.pushViewController(leaguesView, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width * 0.47, height: collectionView.frame.size.width * 0.34)
