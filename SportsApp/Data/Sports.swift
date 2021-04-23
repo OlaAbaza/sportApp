@@ -7,4 +7,21 @@
 //
 
 import Foundation
+struct SportsList: Codable {
+    var sports: [Sport]?
+
+}
+
+struct Sport: Codable {
+    var sportName: String?
+    var sportImg: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case sportName = "strSport"
+        case sportImg = "strSportThumb"
+    }
+}
+
+
+
 
