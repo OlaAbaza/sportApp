@@ -44,8 +44,4 @@ struct Leagues : Codable {
 
 }
 
-class LeaguesInfoModel: NSObject {
-    public var info: Leagues = Leagues()
-    public var moreInfo: LeaguesDetailes = LeaguesDetailes()
-    public var youTubeID: String?
-}
+

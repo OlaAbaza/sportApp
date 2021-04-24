@@ -17,7 +17,7 @@ class YoutubeViewController: UIViewController {
        
        override func viewDidLoad() {
            super.viewDidLoad()
-           let myURL = URL(string: "https://\(youtubeLink)")
+           let myURL = URL(string: "https://" + (youtubeLink))
            
            let myRequest = URLRequest(url: myURL!)
            youtubeWebView.load(myRequest)

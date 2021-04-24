@@ -11,18 +11,21 @@ import UIKit
 class LeaguesViewController: UIViewController {
 
     @IBOutlet weak var leaguesTabelView: UITableView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var sportName:String!
     var leagues = [LeaguesInfoModel]()
    // let indicator = Indicator()
+    var filteredData :[LeaguesInfoModel]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         leaguesTabelView.delegate = self
-         leaguesTabelView.dataSource=self
+        leaguesTabelView.delegate = self
+        leaguesTabelView.dataSource = self
+        searchBar.delegate = self
+        filteredData = leagues
         print("hello")
         
         
@@ -33,17 +36,19 @@ class LeaguesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         DispatchQueue.global(qos: .background).async {
-            NetworkServiceModal.instance.getData(url: URLs.getLeaguesListURL, completion:{(myLeague: LeaguesModel?,error) in
+            NetworkServiceModal.instance.getData(url:  urls.getLeaguesListURL , completion:{(myLeague: LeaguesModel?,error) in
                 if let myError = error{
                     print("in myError")
                     print(myError)
                 }else{
+                    print("11111")
                     guard let myLeagues = myLeague else {return}
                     for index in 0 ..< myLeagues.leagues!.count{
-                        
+                        print("any")
                             let league: LeaguesInfoModel = LeaguesInfoModel()
                             league.info = myLeagues.leagues![index]
                             self.leagues.append(league)
+                        
                         
                     }
                     self.getMoreInfo()
@@ -59,7 +64,7 @@ class LeaguesViewController: UIViewController {
     private func getMoreInfo(){
           DispatchQueue.global(qos: .background).async {
               for index in 0..<self.leagues.count{
-                NetworkServiceModal.instance.getData(url:URLs.getLeaguesDetailsURL + self.leagues[index].info.idLeague!, completion:{(myLeagueDetailes: LeaguesDetailesModel?,error) in
+                NetworkServiceModal.instance.getData(url:urls.getLeaguesDetailsURL + self.leagues[index].info.idLeague!, completion:{(myLeagueDetailes: LeaguesDetailesModel?,error) in
                       if let myError = error{
                           print(myError)
                       }else{
@@ -113,11 +118,22 @@ extension LeaguesViewController :UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let name = self.filteredData[indexPath.section].info.strLeague ?? ""
+//        let id = self.filteredData[indexPath.section].info.idLeague ?? ""
+//        let image = self.filteredData[indexPath.section].moreInfo.strBadge ?? ""
+//        let youtube = self.filteredData[indexPath.section].moreInfo.strYoutube ?? ""
+//        let myLeague = FavoriteLeague(id: id, name: name, image: image, youtubeUrl:youtube)
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        performSegue(withIdentifier: "ShowDetailes", sender: myLeague)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+//        if segue.identifier == "ShowDetailes" {
+//            if let detailesVC = segue.destination as? LeaguesDetialesViewController{
+//
+//                detailesVC.myLeague = league
+//            }
+//        }
     }
     
     
@@ -130,4 +146,28 @@ extension LeaguesViewController{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 8
     }
+}
+
+// MARK: Search Bar
+extension LeaguesViewController :UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        
+        if searchText == ""{
+            filteredData = leagues
+        }
+        
+        filteredData = []
+        for i in leagues{
+                
+            if (i.moreInfo.strLeague?.contains(searchText))!{
+                    filteredData.append(i)
+                }
+        }
+        self.leaguesTabelView.reloadData()
+        
+    }
+
+    
 }
