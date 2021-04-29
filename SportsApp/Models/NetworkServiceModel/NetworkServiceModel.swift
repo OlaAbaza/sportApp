@@ -12,7 +12,6 @@ import Alamofire
 
 class NetworkServiceModal {
     static let instance = NetworkServiceModal()
-    
     func checkInternet() -> Bool{
         return NetworkReachabilityManager()?.isReachable ?? false
     }

@@ -48,7 +48,9 @@
         <scene sceneID="Yje-ES-xzP">
             <objects>
                 <navigationController id="ncK-ar-3aW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="CF0-C3-7Oo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="CF0-C3-7Oo">
+                        <color key="badgeColor" red="1" green="0.76294457910000002" blue="0.023706879470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvW-zT-iox">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -503,7 +505,9 @@
         <scene sceneID="9ad-l3-akm">
             <objects>
                 <navigationController id="n37-uZ-bYM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite" image="heart.fill" catalog="system" id="STa-88-E1W"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="heart.fill" catalog="system" selectedImage="heart.fill" id="STa-88-E1W">
+                        <color key="badgeColor" red="1" green="0.76294457910000002" blue="0.023706879470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqo-m1-Wy4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -558,6 +562,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.76294457910000002" blue="0.023706879470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ncK-ar-3aW" kind="relationship" relationship="viewControllers" id="HNa-Jz-sQI"/>

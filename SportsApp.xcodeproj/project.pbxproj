@@ -103,8 +103,8 @@
 		399DE70F263A277700098C16 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		399DE73F263A2CEF00098C16 /* SportsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SportsCollectionViewController.swift; path = SportsApp/Controllers/SportsController/SportsCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		399DE76E263AB12300098C16 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
-		399DE773263AB1AD00098C16 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaguesViewController.swift; path = SportsApp/Controllers/LeaguesViewController.swift; sourceTree = SOURCE_ROOT; };
-		399DE778263AB20C00098C16 /* LeaguesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaguesTableCell.swift; path = SportsApp/Controllers/LeaguesTableCell.swift; sourceTree = SOURCE_ROOT; };
+		399DE773263AB1AD00098C16 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaguesViewController.swift; path = SportsApp/Controllers/LeaguesController/LeaguesViewController.swift; sourceTree = SOURCE_ROOT; };
+		399DE778263AB20C00098C16 /* LeaguesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaguesTableCell.swift; path = SportsApp/Controllers/LeaguesController/LeaguesTableCell.swift; sourceTree = SOURCE_ROOT; };
 		399DE77D263AB26B00098C16 /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
 		399DE782263AB2C300098C16 /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		399DE787263AB30600098C16 /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
@@ -236,9 +236,9 @@
 		117224BA262F899A00510CA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				399DE7D7263AF3A600098C16 /* LeaguesController */,
 				399DE71C263A289600098C16 /* SportsController */,
 				399B4B402639D772009298CB /* LeaguesDetialesController */,
-				399B4B332639D739009298CB /* LeaguesController */,
 				399DE704263A252E00098C16 /* TeamDetialesViewController.swift */,
 				399DE70F263A277700098C16 /* FavoriteViewController.swift */,
 				399DE76E263AB12300098C16 /* SocialViewController.swift */,
@@ -281,16 +281,6 @@
 			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
-		399B4B332639D739009298CB /* LeaguesController */ = {
-			isa = PBXGroup;
-			children = (
-				399DE773263AB1AD00098C16 /* LeaguesViewController.swift */,
-				399DE778263AB20C00098C16 /* LeaguesTableCell.swift */,
-			);
-			name = LeaguesController;
-			path = "../../../sportApp 3/SportsApp/Controllers/LeaguesController";
-			sourceTree = "<group>";
-		};
 		399B4B402639D772009298CB /* LeaguesDetialesController */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +299,15 @@
 				399DE77D263AB26B00098C16 /* SportsCollectionViewCell.swift */,
 			);
 			path = SportsController;
+			sourceTree = "<group>";
+		};
+		399DE7D7263AF3A600098C16 /* LeaguesController */ = {
+			isa = PBXGroup;
+			children = (
+				399DE778263AB20C00098C16 /* LeaguesTableCell.swift */,
+				399DE773263AB1AD00098C16 /* LeaguesViewController.swift */,
+			);
+			path = LeaguesController;
 			sourceTree = "<group>";
 		};
 		4331775667533A1EC832BF5C /* Pods */ = {
