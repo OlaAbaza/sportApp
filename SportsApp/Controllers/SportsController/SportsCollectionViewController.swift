@@ -68,40 +68,40 @@ class SportsCollectionViewController: UICollectionViewController,UICollectionVie
         return sports.count
     }
 
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)as! SportsCollectionViewCell
-//        let name = sports[indexPath.row].sportName!
-//        let image = sports[indexPath.row].sportImg!
-//        
-//        cell.setUpSportsCollectionCell(sportName:name, imageName: image)
-//        
-//        let layer = CAShapeLayer()
-//        layer.path  = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomRight, .topLeft , .bottomLeft ,.topRight], cornerRadii: CGSize(width: 20, height: 20)).cgPath
-//        layer.fillColor = UIColor.red.cgColor
-//        cell.layer.mask = layer
-//        cell.layer.borderWidth = 2
-//        cell.layer.borderColor = UIColor(named: "light")?.cgColor
-//        cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
-//        
-////        let rectShape = CAShapeLayer()
-////        rectShape.bounds = cell.frame
-////        rectShape.position = cell.center
-////        rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomRight, .topLeft], cornerRadii: CGSize(width: 20, height: 20)).cgPath
-////        cell.layer.mask = rectShape
-////        cell.layer.borderWidth = 4
-////        cell.layer.borderColor = UIColor(named: "light")?.cgColor
-////        cell.layer.cornerRadius = cell.frame.width/4
-////        cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
-//    
-//        return cell
-//    }
-    // MARK: UICollectionViewDelegate
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let leaguesView = storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! LeaguesViewController
-//        leaguesView.sportName = sports[indexPath.row].sportName!
-//
-//        self.navigationController?.pushViewController(leaguesView, animated: true)
-//    }
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)as! SportsCollectionViewCell
+        let name = sports[indexPath.row].sportName!
+        let image = sports[indexPath.row].sportImg!
+        
+        cell.setUpSportsCollectionCell(sportName:name, imageName: image)
+        
+        let layer = CAShapeLayer()
+        layer.path  = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomRight, .topLeft , .bottomLeft ,.topRight], cornerRadii: CGSize(width: 20, height: 20)).cgPath
+        layer.fillColor = UIColor.red.cgColor
+        cell.layer.mask = layer
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor(named: "light")?.cgColor
+        cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+        
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = cell.frame
+        rectShape.position = cell.center
+        rectShape.path = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: [.bottomRight, .topLeft], cornerRadii: CGSize(width: 20, height: 20)).cgPath
+        cell.layer.mask = rectShape
+        cell.layer.borderWidth = 4
+        cell.layer.borderColor = UIColor(named: "light")?.cgColor
+        cell.layer.cornerRadius = cell.frame.width/4
+        cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+    
+        return cell
+    }
+     //MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let leaguesView = storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! LeaguesViewController
+        leaguesView.sportName = sports[indexPath.row].sportName!
+
+        self.navigationController?.pushViewController(leaguesView, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width * 0.47, height: collectionView.frame.size.width * 0.34)
     }
