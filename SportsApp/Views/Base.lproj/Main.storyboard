@@ -44,11 +44,11 @@
             </objects>
             <point key="canvasLocation" x="822" y="801"/>
         </scene>
-        <!--Sports-->
+        <!--Home-->
         <scene sceneID="Yje-ES-xzP">
             <objects>
                 <navigationController id="ncK-ar-3aW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sports" image="sportscourt.fill" catalog="system" id="CF0-C3-7Oo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="CF0-C3-7Oo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvW-zT-iox">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -160,7 +160,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-T9-RTp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-T9-RTp">
                                                 <rect key="frame" x="25" y="300" width="364" height="27.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6qN-PB-c4k">
-                                <rect key="frame" x="0.0" y="576.66666666666663" width="414" height="110.33333333333337"/>
+                                <rect key="frame" x="0.0" y="625.66666666666663" width="414" height="110.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BVg-lw-aDx">
                                     <size key="itemSize" width="140" height="124"/>
@@ -319,8 +319,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="124"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zR7-UF-kHC">
-                                                    <rect key="frame" x="8" y="0.0" width="124" height="101"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="zR7-UF-kHC">
+                                                    <rect key="frame" x="8" y="10" width="116" height="104"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -338,7 +338,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LrU-jp-A2Y" userLabel="TopCollection View">
-                                <rect key="frame" x="0.0" y="44.000000000000007" width="414" height="117.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="117.66666666666667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BqM-Vp-duF">
                                     <size key="itemSize" width="196" height="198"/>
@@ -348,7 +348,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCell" id="FAC-Qj-OMG" customClass="teamCell" customModule="SportsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-40" width="196" height="198"/>
+                                        <rect key="frame" x="0.0" y="-40.333333333333336" width="196" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V1g-sL-q9H">
                                             <rect key="frame" x="0.0" y="0.0" width="196" height="198"/>
@@ -359,7 +359,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IgK-aN-RM6">
-                                <rect key="frame" x="0.0" y="161.66666666666663" width="414" height="415"/>
+                                <rect key="frame" x="0.0" y="117.66666666666669" width="414" height="508.00000000000006"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sua-qS-TIe">
                                     <size key="itemSize" width="128" height="128"/>
@@ -416,14 +416,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KFo-Ge-SDW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="wrD-jK-DsU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LeaguesTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaguesTableCell" rowHeight="120" id="NG4-jO-Egn" customClass="LeaguesTableCell" customModule="SportsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NG4-jO-Egn" id="WuN-hB-pQX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -669,12 +664,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gPZ-ro-oPR"/>
+        <segue reference="mHk-4a-l76"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Facebook" width="1200" height="1200"/>
         <image name="Instagram" width="769" height="768"/>
         <image name="Twitter" width="225" height="225"/>
+        <image name="appicon" width="860" height="680"/>
         <image name="barButtonItem:grf-uI-k3x:image" width="128" height="109">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
@@ -15711,8 +15707,8 @@ AAAAAAANwTw
 </mutableData>
         </image>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="no" width="600" height="600"/>
-        <image name="sportscourt.fill" catalog="system" width="128" height="84"/>
         <image name="youtube" width="512" height="512"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

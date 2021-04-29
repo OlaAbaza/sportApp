@@ -26,8 +26,8 @@ class TeamDetialesViewController: UIViewController {
     }
     func setupView(){
         if let team = self.team {
-            if let teamImgUrl = team.strTeamLogo{
-                let img = NSURL(string: teamImgUrl ?? "")! as URL
+            if let teamImgUrl = team.strTeamBadge{
+                let img = NSURL(string: teamImgUrl )! as URL
                 self.teamLogoImage.sd_setImage(with: img, completed: nil)
             }
             self.teamNameLabel.text = team.strTeam ?? ""

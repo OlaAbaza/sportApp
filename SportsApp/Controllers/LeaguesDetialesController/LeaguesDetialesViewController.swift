@@ -21,13 +21,9 @@ class LeaguesDetialesViewController: UIViewController {
     let coreData = CoreDataModel()
     let indicator = Indicator()
     
-//    var myLeague : String?
-//    var myTeam : String?
     
    override func viewDidLoad() {
         super.viewDidLoad()
-//        myLeague = "4328"
-//        myTeam = "English%20Premier%20League"
         self.title = myLeagues?.name
         self.view.backgroundColor = UIColor(named: "background")
     if coreData.isLeagueInFavorate(ID: (myLeagues?.id)!) {
@@ -182,9 +178,12 @@ extension LeaguesDetialesViewController: UICollectionViewDelegate, UICollectionV
             let team = self.teams![indexPath.row]
             teamCell.updateCell(teamImage: team.strTeamBadge! ?? "")
 //            teamCell.layer.borderWidth =  1
-//            teamCell.layer.borderColor = UIColor(named: "light")?.cgColor
-//            teamCell.layer.cornerRadius = teamCell.frame.size.width/2
-//            teamCell.layer.masksToBounds = true
+//            teamCell.layer.borderColor = UIColor(named: "border")?.cgColor
+//            teamCell.layer.cornerRadius = teamCell.frame.size.height/2
+//            teamCell.layer.masksToBounds = false
+//            teamCell.clipsToBounds = true
+//            teamCell.contentMode = UIView.ContentMode.scaleAspectFill
+            
             return teamCell
         }
     }

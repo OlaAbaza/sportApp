@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCollectionViewCell" id="i1u-fl-KqD" customClass="TeamCollectionViewCell" customModule="SportApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="242" height="167"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="242" height="167"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liverPool" translatesAutoresizingMaskIntoConstraints="NO" id="Rwd-vm-kYC">
+                        <rect key="frame" x="16" y="62" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="aGm-l5-IpB"/>
+                            <constraint firstAttribute="width" constant="75" id="gie-Eh-uyv"/>
+                            <constraint firstAttribute="width" secondItem="Rwd-vm-kYC" secondAttribute="height" multiplier="1:1" id="its-e5-v4S"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SQZ-Wr-1jC"/>
+            <constraints>
+                <constraint firstItem="Rwd-vm-kYC" firstAttribute="leading" secondItem="i1u-fl-KqD" secondAttribute="leading" constant="16" id="P0b-Fg-L7k"/>
+                <constraint firstItem="Rwd-vm-kYC" firstAttribute="top" secondItem="i1u-fl-KqD" secondAttribute="top" constant="62" id="RDB-Hx-fKp"/>
+            </constraints>
+            <size key="customSize" width="242" height="167"/>
+            <connections>
+                <outlet property="teamImageView" destination="Rwd-vm-kYC" id="pBX-df-b1f"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="107"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="liverPool" width="1024" height="768"/>
+    </resources>
+</document>
