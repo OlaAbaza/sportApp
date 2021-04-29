@@ -11,7 +11,8 @@ import Foundation
 enum URLs : String {
     case getSportsListURL = "https://www.thesportsdb.com/api/v1/json/1/all_sports.php"
     case legueNameUrl = "https://www.thesportsdb.com/api/v1/json/1/all_leagues.php"
-    case lequeDetailsUrl = "https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id="
+    case lequeDetailsUrl =
+        "https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id="
     case getEventDetailsUrl = "https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id="
     case getUpcommingEventUrl =
 "https://www.thesportsdb.com/api/v1/json/1/eventsround.php?r=38&s=2020-2021&id="

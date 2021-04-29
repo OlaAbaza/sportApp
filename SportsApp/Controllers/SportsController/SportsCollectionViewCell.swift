@@ -14,7 +14,7 @@ class SportsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sportNameLabel: UILabel!
     
     func setUpSportsCollectionCell(sportName: String, imageName: String) {
-        print(sportName)
+        //print(sportName)
         sportNameLabel.text = sportName
       sportImage.sd_setImage(with: URL(string: imageName), placeholderImage: UIImage(named: "no"))
         

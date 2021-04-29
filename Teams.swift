@@ -16,11 +16,6 @@ struct Teams : Codable {
     let strAlternate : String?
     let intFormedYear : String?
     let strSport : String?
-    let strDivision : String?
-    let strManager : String?
-    let strStadium : String?
-    let strKeywords : String?
-    let strRSS : String?
     let strWebsite : String?
     let strFacebook : String?
     let strTwitter : String?
@@ -33,7 +28,7 @@ struct Teams : Codable {
     let strTeamLogo : String?
     let strTeamBanner : String?
     let strYoutube : String?
-    let strLocked : String?
+
 
 }
 struct TeamModel : Codable {
