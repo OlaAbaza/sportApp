@@ -6,7 +6,7 @@ Ios Mobile Application that displays list of all sports,Teams,Leagues,and you ca
 list of favorite. 
 
 # Features
-* MVC rchitecture.
+* MVC architecture.
 * Network Layer Using Alamofire.
 * Data presistence with Core Data.
 * Autolayout with constraints.
